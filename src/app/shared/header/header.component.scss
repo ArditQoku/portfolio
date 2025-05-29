@@ -1,0 +1,101 @@
+@import "./../../../styles.scss";
+
+header {
+  width: 100%;
+  background-color: $darkBlue;
+  height: 100px;
+  @include flexPosition(center, unset, row);
+
+  .burgerMenu {
+    width: 27px;
+    height: 27px;
+    display: none;
+    cursor: pointer;
+  }
+
+  div {
+    @include flexPosition(space-between, center, unset);
+
+    .name {
+      cursor: pointer;
+      text-decoration: none;
+      @include flexPosition(unset, center, row);
+
+      span {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+
+        &:nth-child(3) {
+          color: $babyBlue;
+        }
+        &:nth-child(2) {
+          color: $midBlue;
+        }
+      }
+    }
+
+    > nav {
+      gap: 24px;
+      @include flexPosition(unset, center, row);
+
+      font-size: 20px;
+
+      > a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          color: $babyBlue;
+          transition: color 100ms linear;
+        }
+      }
+
+      .languageSwitcher {
+        @include flexPosition(unset, center, row);
+        gap: 5px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+
+        span {
+          padding: 0 5px;
+          cursor: pointer;
+          position: relative;
+
+          &.active {
+            border-bottom: 2px solid $babyBlue;
+          }
+
+          &:hover {
+            color: $babyBlue;
+            transition: color 100ms linear;
+          }
+        }
+
+        .divider {
+          &:hover {
+            color: white;
+            transition: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .links {
+    display: none !important;
+  }
+
+  .burgerMenu {
+    display: block !important;
+  }
+
+  .maxWidth {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

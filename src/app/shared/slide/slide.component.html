@@ -1,0 +1,30 @@
+<section class="sidebar" [class.active]="isSidebarOpen">
+    <header>
+        <div class="maxWidth">
+            <a class="name">
+                <span>A</span>
+                <span>r</span>
+                <span>d</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+            <img (click)="this.controll.toggleSidebar()" id="burgerMenuSlide" class="burgerMenu" src="">
+        </div>
+    </header>
+    <nav class="links">
+        <a (click)="toggleAndScrollFunction('aboutMe', 100)">
+            {{ 'header.aboutMe' | translate }}
+        </a>
+        <a (click)="toggleAndScrollFunction('skills', 0)">
+            {{ 'header.skills' | translate }}
+        </a>
+        <a (click)="toggleAndScrollFunction('portfolio', 100)">
+            {{ 'header.portfolio' | translate }}
+        </a>
+        <div class="languageSwitcher">
+            <span (click)="switchLanguage('en')" [class.active]="controll.selectedLanguage === 'en'">EN</span>
+            <span class="divider">|</span>
+            <span (click)="switchLanguage('de')" [class.active]="controll.selectedLanguage === 'de'">DE</span>
+        </div>
+    </nav>
+</section>

@@ -1,0 +1,25 @@
+<footer>
+    <div class="maxWidth subFooter">
+        <div class="nameImprint">
+            <a class="name" href="#header">
+                <span>A</span>
+                <span>r</span>
+                <span>d</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+            <a *ngIf="currentPixel >= 700" class="imprint" href="imprint">{{ 'imprint.imp' | translate }}</a>
+
+        </div>
+        <div class="copyright">© Ardit Qoku</div>
+
+        <nav>
+            <a href="https://github.com/ArditQoku" target="_blank"><img src="/assets/img/icons/git.png"></a>
+            <a href="mailto:arditqoku@hotmail.com"><img src="/assets/img/icons/mail.png"></a>
+            <a href="https://www.linkedin.com/in/ardit-qoku/" 
+                target="_blank"><img src="/assets/img/icons/in.png"></a>
+        </nav>
+
+        <a *ngIf="currentPixel < 700" class="imprint" [routerLink]="['/imprint']">{{ 'imprint.imp' | translate }}</a>
+    </div>
+</footer>

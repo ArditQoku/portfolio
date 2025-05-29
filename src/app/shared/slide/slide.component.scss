@@ -1,0 +1,130 @@
+@import "./../../../styles.scss";
+
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 100ms ease-in-out;
+  overflow-x: hidden;
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+header {
+  width: 100%;
+  background-color: transparent;
+  height: 100px;
+  @include flexPosition(space-between, center, row);
+}
+
+nav {
+  @include flexPosition(unset, center, column);
+  gap: 24px;
+  font-size: 20px;
+  flex-basis: 100%;
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      color: $babyBlue;
+      transition: color 100ms linear;
+      text-decoration: none;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 3px;
+      background: $midBlue;
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      transition: width 125ms ease-in-out;
+    }
+
+    &:hover::after {
+      width: 50%;
+    }
+  }
+}
+
+.links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flexPosition(center, center, column);
+  flex-basis: 100%;
+}
+
+.name {
+  cursor: pointer;
+
+  span {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+
+    &:nth-child(3) {
+      color: $babyBlue;
+    }
+
+    &:nth-child(2) {
+      color: $midBlue;
+    }
+  }
+}
+
+.maxWidth {
+  padding-left: 5%;
+  padding-right: 5%;
+  @include flexPosition(space-between, center, row);
+}
+
+.burgerMenu {
+  z-index: 999 !important;
+  cursor: pointer;
+}
+
+.languageSwitcher {
+  @include flexPosition(unset, center, row);
+  gap: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+  span {
+    padding: 0 5px;
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+      border-bottom: 2px solid $babyBlue;
+    }
+
+    &:hover {
+      color: rgb(0, 190, 232);
+      transition: color 100ms linear;
+    }
+  }
+
+  .divider {
+    &:hover {
+      color: white;
+      transition: none;
+    }
+  }
+}

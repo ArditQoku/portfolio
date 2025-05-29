@@ -1,0 +1,21 @@
+<div class="lineROutsideTransparent"></div>
+<section id="skills">
+    <div class="skills">
+        <app-icons></app-icons>
+        <div class="skillsText">
+            <div class="skillsTextHeader">
+                <span class="title animateOnScroll">{{ 'skills.mySkills' | translate }}</span>
+                <div class="lineRightInside "></div>
+            </div>
+            <div class="skillsTextHeader">
+                <span class="infoSkills animateOnScroll">{{ 'skills.text' | translate }}</span>
+                <div class="lineRightTransparent"></div>
+            </div>
+            <a (click)="controll.scrollToElement('contact', 100)" class="styledLink" *ngIf="currentPixel >= 860">{{ 'skills.getInTouch' |
+                translate }}</a>
+        </div>
+        <a (click)="controll.scrollToElement('contact', 100)" class="styledLink" *ngIf="currentPixel < 860">{{ 'skills.getInTouch' | translate
+            }}</a>
+    </div>
+</section>
+<div class="lineOutsideRight"></div>

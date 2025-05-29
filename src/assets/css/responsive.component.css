@@ -1,0 +1,728 @@
+.iAm {
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  position: relative;
+  height: 100px;
+  top: 158px;
+  font-size: 58px;
+  white-space: nowrap;
+  color: white;
+  margin-right: -40px;
+}
+
+@media (max-width: 3000px) {
+  .form {
+    top: -150px !important;
+  }
+}
+
+@media (max-width: 2950px) {
+  .form {
+    top: -140px !important;
+  }
+}
+
+@media (max-width: 2900px) {
+  .form {
+    top: -130px !important;
+  }
+}
+
+@media (max-width: 2850px) {
+  .form {
+    top: -120px !important;
+  }
+}
+
+@media (max-width: 2800px) {
+  .form {
+    top: -110px !important;
+  }
+}
+
+@media (max-width: 2750px) {
+  .form {
+    top: -100px !important;
+  }
+}
+
+@media (max-width: 2700px) {
+  .form {
+    top: -90px !important;
+  }
+}
+
+@media (max-width: 2650px) {
+  .form {
+    top: -80px !important;
+  }
+}
+
+@media (max-width: 2600px) {
+  .form {
+    top: -70px !important;
+  }
+}
+
+@media (max-width: 2550px) {
+  .form {
+    top: -60px !important;
+  }
+}
+
+@media (max-width: 2500px) {
+  .form {
+    top: -50px !important;
+  }
+}
+
+@media (max-width: 2450px) {
+  .form {
+    top: -40px !important;
+  }
+}
+
+@media (max-width: 2400px) {
+  .form {
+    top: -30px !important;
+  }
+}
+
+@media (max-width: 2350px) {
+  .form {
+    top: -20px !important;
+  }
+}
+
+@media (max-width: 2300px) {
+  .form {
+    top: -10px !important;
+  }
+}
+
+@media (max-width: 2250px) {
+  .form {
+    top: 0px !important;
+  }
+}
+
+@media (max-width: 2200px) {
+  .form {
+    top: 10px !important;
+  }
+}
+
+@media (max-width: 2150px) {
+  .form {
+    top: 20px !important;
+  }
+}
+
+@media (max-width: 2100px) {
+  .form {
+    top: 30px !important;
+  }
+}
+
+@media (max-width: 2050px) {
+  .form {
+    top: 40px !important;
+  }
+}
+
+@media (max-width: 2000px) {
+  .form {
+    top: 50px !important;
+  }
+}
+
+@media (max-width: 1950px) {
+  .form {
+    top: 145px !important;
+  }
+}
+
+@media (max-width: 1900px) {
+  .form {
+    top: 200px !important;
+  }
+}
+
+@media (max-width: 1850px) {
+  .form {
+    top: 200px !important;
+  }
+}
+
+@media (max-width: 1800px) {
+  .form {
+    top: 200px !important;
+  }
+}
+
+@media (max-width: 1750px) {
+  .form {
+    top: 218px !important;
+  }
+}
+
+@media (max-width: 1700px) {
+  .form {
+    top: 185px !important;
+  }
+}
+
+@media (max-width: 1650px) {
+  .form {
+    top: 205px !important;
+  }
+}
+
+@media (max-width: 1600px) {
+  .form {
+    top: 225px !important;
+  }
+}
+
+@media (max-width: 1550px) {
+  .form {
+    top: 245px !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  .form {
+    top: 265px !important;
+  }
+}
+
+@media (max-width: 1450px) {
+  .form {
+    top: 285px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .form {
+    top: 305px !important;
+  }
+}
+
+@media (max-width: 1350px) {
+  .form {
+    top: 325px !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  #container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .textContainer {
+    justify-content: center !important;
+    width: 100% !important;
+    padding-top: 30px !important;
+  }
+
+  .photoParentDiv {
+    width: 400px !important;
+    flex: unset !important;
+  }
+
+  .photoLandingpage {
+    width: 100% !important;
+  }
+
+  .backgroundForm {
+    top: 0 !important;
+  }
+
+  .parentTextContainer {
+    padding-right: 0 !important;
+    margin-top: -49px !important;
+  }
+
+  .form {
+    top: 164px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bm {
+    font-size: 80px !important;
+  }
+
+  .iAm {
+    margin-right: -44px !important;
+  }
+
+  .form {
+    top: 181px !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .form {
+    top: 195px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .bm {
+    font-size: 75px !important;
+  }
+
+  .fd {
+    font-size: 56px !important;
+  }
+
+  .iAm {
+    top: 146px !important;
+    font-size: 53px !important;
+    margin-right: -41px !important;
+  }
+
+  .form {
+    top: 210px !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .form {
+    top: 225px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bm {
+    font-size: 70px !important;
+  }
+
+  .fd {
+    font-size: 52px !important;
+  }
+
+  .iAm {
+    top: 134px !important;
+    font-size: 49px !important;
+  }
+
+  .form {
+    top: 243px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .form {
+    top: 256px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    top: 268px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .form {
+    top: 281px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .form {
+    top: 295px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .form {
+    top: 308px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .bm {
+    font-size: 65px !important;
+  }
+
+  .fd {
+    font-size: 48px !important;
+    margin-top: -28px !important;
+  }
+
+  .iAm {
+    top: 126px !important;
+    font-size: 46px !important;
+    margin-right: -37px !important;
+  }
+
+  #textBox {
+    gap: 5px !important;
+  }
+
+  .form {
+    top: 307px !important;
+  }
+
+  .photoLandingpage {
+    width: 100% !important;
+  }  
+}
+
+@media (max-width: 650px) {
+  .form {
+    top: 451px !important;
+  }
+
+  .maxWidth {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .photoLandingpage {
+    width: 100% !important;
+  }
+
+  .lineLeftInside {
+    width: 5% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .photoParentDiv {
+    width: 350px !important;
+  }
+
+  .bm {
+    font-size: 60px !important;
+  }
+
+  .fd {
+    font-size: 44px !important;
+  }
+
+  .iAm {
+    top: 120px !important;
+    font-size: 44px !important;
+    margin-right: -45px !important;
+  }
+
+  .textContainer {
+    gap: 10px !important;
+  }
+
+  #textBox {
+    gap: 8px !important;
+  }
+
+  .form {
+    top: 425px !important;
+  }
+
+  .parentTextContainer {
+    margin-top: -40px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .bm {
+    font-size: 50px !important;
+  }
+
+  .fd {
+    font-size: 37px !important;
+  }
+
+  .iAm {
+    top: 98px !important;
+    font-size: 35px !important;
+    margin-right: -42px !important;
+  }
+
+  #textBox {
+    gap: 10px !important;
+  }
+
+  .textContainer {
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .bm {
+    font-size: 45px !important;
+  }
+
+  .fd {
+    font-size: 33px !important;
+  }
+
+  .iAm {
+    top: 87px !important;
+    font-size: 31px !important;
+    margin-right: -37px !important;
+  }
+
+  button {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .photoParentDiv {
+    width: 250px !important;
+  }
+
+  .form {
+    top: 360px !important;
+  }
+
+  .bm {
+    font-size: 40px !important;
+  }
+
+  .fd {
+    font-size: 30px !important;
+  }
+
+  .iAm {
+    top: 76px !important;
+    font-size: 27px !important;
+    margin-right: -40px !important;
+  }
+
+  .textContainer {
+    gap: 16px !important;
+  }
+
+  #textBox {
+    gap: 12px !important;
+  }
+
+  .photoLandingpage {
+    width: 100% !important;
+    bottom: 45px !important;
+  }  
+
+  .backgroundForm {
+    top: -80px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .bm {
+    font-size: 35px !important;
+  }
+
+  .fd {
+    font-size: 26px !important;
+  }
+
+  .iAm {
+    top: 67px !important;
+    font-size: 24px !important;
+    margin-right: -38px;
+  }
+
+  #textBox {
+    gap: 16px !important;
+  }
+
+  .textContainer {
+    gap: 18px !important;
+  }
+
+  button {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 1450px) and (max-height: 740px) and (min-height: 400px) {
+  .photoLandingpage {
+    width: 431px !important;
+  }
+
+  .form {
+    top: 77px !important;
+  }
+}
+
+@media (max-width: 1350px) and (max-height: 740px) and (min-height: 400px) {
+  header {
+    height: 62px !important;
+  }
+
+  .photoLandingpage {
+    width: 78% !important;
+  }  
+
+  .iAm {
+    top: 85px !important;
+    font-size: 29px !important;
+    margin-right: -19px !important;
+  }
+
+  .bm {
+    font-size: 55px !important;
+  }
+
+  .fd {
+    font-size: 26px !important;
+    margin-top: -22px !important;
+  }
+
+  .form {
+    top: 45px !important;
+  }
+}
+
+@media (max-width: 1200px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 61px !important;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 88px !important;
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 113px !important;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 137px !important;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 161px !important;
+  }
+}
+
+@media (max-width: 700px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 185px !important;
+  }
+}
+
+@media (max-width: 650px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 305px !important;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 740px) and (min-height: 400px) {
+  .photoLandingpage {
+    width: 90% !important;
+  }
+
+  .iAm {
+    top: 81px !important;
+    font-size: 27px !important;
+    margin-right: -19px !important;
+  }
+
+  .bm {
+    font-size: 50px !important;
+  }
+
+  .fd {
+    font-size: 24px !important;
+    margin-top: -22px !important;
+  }
+
+  .form {
+    top: 425px !important;
+  }
+}
+
+@media (max-width: 500px) and (max-height: 740px) and (min-height: 400px) {
+  .photoLandingpage {
+    width: 86% !important;
+    bottom: 0px !important;
+  }
+
+  .form {
+    top: 302px !important;
+  }
+}
+
+@media (max-width: 400px) and (max-height: 740px) and (min-height: 400px) {
+  .form {
+    top: 224px !important;
+  }
+
+  .bm {
+    font-size: 47px !important;
+  }
+} 
+
+@media (max-width: 360px) and (max-height: 740px) and (min-height: 400px) {
+  .bm {
+    font-size: 37px !important;
+  }
+
+  .fd {
+    font-size: 18px !important;
+    margin-top: -27px !important; 
+  }
+
+  .iAm {
+    top: 66px !important;
+    font-size: 23px !important;
+    margin-right: -31px !important;
+  }
+
+  button {
+    font-size: 12px !important;
+  }
+
+  .form {
+    top: 242px !important;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 940px) and (min-height: 400px) {
+  .photoLandingpage {
+    bottom: -3px !important;
+  }
+
+  .form {
+    top: 196px !important;
+  }
+}
+
+@media (max-width: 400px) and (max-height: 940px) and (min-height: 400px) {
+  .form {
+    top: 306px !important;
+  }
+}
+
+@media (max-width: 376px) and (max-height: 668px) and (min-height: 400px) {
+  .form {
+    top: 195px !important;
+  }
+}
+
+@media (max-width: 376px) and (max-height: 741px) and (min-height: 400px) {
+  .form {
+    top: 240px !important;
+  }
+}
+
+@media (max-width: 345px) and (max-height: 883px) and (min-height: 400px) {
+  .form {
+    top: 384px !important;
+  }
+}

@@ -1,0 +1,150 @@
+@import "./../../../styles.scss";
+
+:host {
+  @include flexPosition(center, unset, row);
+}
+
+section {
+  width: 100%;
+  max-width: 1990px;
+  background-color: $darkBlue;
+  @include flexPosition(center, center, column);
+  position: relative;
+}
+
+.lineLeftInside {
+  height: 4px;
+  width: 84px;
+  background-color: $midBlue;
+}
+
+.lineOutsideLeft {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+  z-index: 11;
+  margin-top: 66px;
+}
+
+.lineOutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+  margin-top: 66px;
+}
+
+.header {
+  @include flexPosition(unset, center, row);
+  gap: 16px;
+  position: relative;
+  z-index: 10;
+  max-width: 1990px;
+  width: 100%;
+
+  span {
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    animation: fadeInAndExpand 1s ease-in-out;
+  }
+}
+
+.infoBlockEmail {
+  @include flexPosition(space-between, unset, row);
+  color: white;
+  gap: 32px;
+  position: relative;
+  z-index: 10;
+
+  div {
+    @include flexPosition(unset, unset, column);
+    gap: 16px;
+  }
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out;
+  }
+}
+
+.groupSeven {
+  position: absolute;
+  bottom: 0;
+  left: -250px;
+  width: 500px;
+  z-index: 10;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .infoBlockEmail {
+    @include flexPosition(center, unset, column);
+  }
+
+  .header span {
+    font-size: 70px;
+  }
+
+  .groupSeven {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .lineLeftInside {
+    width: 5%;
+  }
+
+  .header span {
+    font-size: 60px;
+    padding-left: 12px;
+  }
+
+  .header {
+    gap: 0;
+  }
+
+  .infoBlockEmail div {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .groupSeven {
+    width: 100% !important;
+    left: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .header span {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header span {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header span {
+    font-size: 36px;
+  }
+}

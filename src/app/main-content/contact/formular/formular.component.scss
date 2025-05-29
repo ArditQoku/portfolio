@@ -1,0 +1,206 @@
+@import "./../../../../styles.scss";
+
+.container {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form {
+  @include flexPosition(unset, unset, column);
+  gap: 12px;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px;
+  border: 1px solid $midBlue;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: $darkBlue;
+  color: white;
+  outline: none;
+}
+
+.inputFail {
+  position: absolute;
+  right: 10px;
+  top: 23px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+.inputValid {
+  position: absolute;
+  right: 10px;
+  top: 23px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+select:hover,
+textarea:hover {
+  border-color: $babyBlue;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  background-color: $darkBlue !important;
+  color: white !important;
+}
+
+input[type="submit"] {
+  background-color: rgb(182, 182, 182);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 18px;
+}
+
+// .requirements {
+//   color: red;
+//   font-size: 16px;
+//   padding-top: 16px;
+// }
+
+.requirements {
+  color: transparent;
+  font-size: 16px;
+  padding-top: 16px;
+  min-height: 20px;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.requirements.visible {
+  color: red;
+}
+
+.privacyPolicy {
+  @include flexPosition(unset, center, row);
+  height: 80px;
+  gap: 16px;
+  text-shadow: 0px 0px 5px $darkBlue;
+}
+
+.privacyPolicy input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $babyBlue;
+  border-radius: 3px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.privacyPolicy input[type="checkbox"]:checked {
+  background-color: transparent;
+  border-color: $babyBlue;
+}
+
+.privacyPolicy input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: $babyBlue;
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+.privacyPolicy input[type="checkbox"]:hover {
+  background-color: rgba(0, 190, 232, 0.2);
+}
+
+.privacyPolicy a {
+  color: $midBlue;
+}
+
+.privacyPolicy a:hover {
+  text-decoration: underline;
+}
+
+.container span {
+  display: block;
+  margin-top: -12px;
+}
+
+.invalid {
+  border-color: red !important;
+}
+
+.valid {
+  border-color: green !important;
+}
+
+.babyBlue {
+  background-color: $babyBlue !important;
+}
+
+.subDiv {
+  width: 100%;
+  @include flexPosition(center, unset, row);
+}
+
+.goUp {
+  width: 100%;
+  @include flexPosition(flex-end, unset, row);
+  padding-top: 50px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    transition: filter 125ms ease-in-out;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(72%) sepia(67%)
+        saturate(5165%) hue-rotate(152deg) brightness(99%) contrast(105%);
+      cursor: pointer;
+    }
+  }
+}
+
+.ppLink {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.successMessage {
+  color: #0aa50a;
+  font-size: 16px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 10px;
+}
+
+@media (max-width: 450px) {
+  .privacyPolicy {
+    height: fit-content;
+  }
+}

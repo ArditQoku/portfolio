@@ -1,0 +1,29 @@
+<header id="header">
+    <div class="maxWidth">
+        <a class="name" href="#">
+            <span>A</span>
+            <span>r</span>
+            <span>d</span>
+            <span>i</span>
+            <span>t</span>
+        </a>
+        <img *ngIf="controll.isBurgerMenuVisible" (click)="toggleSidebar()" id="burgerMenu" class="burgerMenu"
+             src="./../../../assets/img/forms/burger menu.png" alt="burgerMenu">
+        <nav class="links">
+            <a (click)="controll.scrollToElement('aboutMe', 100)">
+                {{ 'header.aboutMe' | translate }}
+            </a>
+            <a (click)="controll.scrollToElement('skills', 0)">
+                {{ 'header.skills' | translate }}
+            </a>
+            <a (click)="controll.scrollToElement('portfolio', 100)">
+                {{ 'header.portfolio' | translate }}
+            </a>
+            <div class="languageSwitcher">
+                <span (click)="switchLanguage('en')" [class.active]="controll.selectedLanguage === 'en'">EN</span>
+                <span class="divider">|</span>
+                <span (click)="switchLanguage('de')" [class.active]="controll.selectedLanguage === 'de'">DE</span>
+            </div>
+        </nav>
+    </div>
+</header>

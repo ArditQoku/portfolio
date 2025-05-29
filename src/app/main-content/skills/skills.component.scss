@@ -1,0 +1,210 @@
+@import "./../../../styles.scss";
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  background-color: $darkBlue;
+  width: 100%;
+  max-width: 1990px;
+  display: flex;
+  @include flexPosition(center, center, row);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.skills {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  @include flexPosition(space-between, center, row);
+
+  span {
+    color: white;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.styledLink {
+  display: inline-block;
+  width: 200px;
+  height: 58px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: $babyBlue;
+  font-size: 20px;
+  text-align: center;
+  line-height: 58px;
+  cursor: pointer;
+  transition: transform 0.125s ease, background-color 0.1s ease;
+  z-index: 3;
+  text-decoration: none;
+  filter: drop-shadow(0 0 3px $darkBlue);
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $midBlue;
+  }
+}
+
+.skillsText {
+  display: flex;
+  @include flexPosition(center, center, column);
+  gap: 50px;
+  width: 100%;
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out ;
+  }
+}
+
+.title {
+  font-size: 80px;
+  font-weight: bold;
+  text-align: end;
+  width: 100%;
+  position: relative;
+}
+
+.infoSkills {
+  text-align: end;
+  width: 100%;
+}
+
+.lineRightInside {
+  height: 4px;
+  width: 100px;
+  background-color: $midBlue;
+}
+
+.lineROutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.lineOutsideRight {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+  z-index: 11;
+  margin-top: 158px;
+}
+
+.skillsTextHeader {
+  width: 100%;
+  display: flex;
+  @include flexPosition(flex-start, center, row);
+  gap: 16px;
+}
+
+app-icons {
+  color: white;
+  display: flex;
+  @include flexPosition(flex-start, center, row);
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 50px;
+  margin-left: 100px;
+}
+
+@media (max-width: 1350px) {
+  .title {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .title {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .title {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .maxWidth {
+    padding-left: 125px;
+  }
+
+  app-icons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 950px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 860px) {
+  .title {
+    font-size: 45px;
+  }
+
+  .skills {
+    display: flex;
+    @include flexPosition(center, center, column);
+    gap: 64px;
+  }
+
+  .skillsText {
+    order: 1;
+  }
+
+  app-icons {
+    order: 2;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  a {
+    order: 3;
+  }
+
+  .lineRight {
+    margin-top: 34px;
+  }
+
+  .maxWidth {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .lineRightInside {
+    width: 5%;
+  }
+
+  .lineRightTransparent {
+    width: 5%;
+  }
+
+  .infoSkills {
+    padding-left: 5%;
+  }
+}

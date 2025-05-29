@@ -1,0 +1,132 @@
+@import "./../../../styles.scss";
+
+footer {
+  background-color: $darkBlue;
+  height: 200px;
+  @include flexPosition(center, center, row);
+  position: relative;
+  z-index: 10;
+  border-top: solid 2px $babyBlue;
+}
+
+.subFooter {
+  @include flexPosition(space-between, center, row);
+  height: 100%;
+}
+
+.name {
+  cursor: pointer;
+  margin-bottom: -20px;
+  width: fit-content;
+  text-decoration: none;
+
+  span {
+    color: white;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 1;
+
+    &:nth-child(3) {
+      color: $babyBlue;
+    }
+    &:nth-child(2) {
+      color: $midBlue;
+    }
+  }
+}
+
+.imprint {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  width: fit-content;
+  padding-top: 14px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 3px;
+    background: $babyBlue;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 125ms ease-in-out;
+  }
+
+  &:hover::after {
+    width: 50%;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.nameImprint {
+  @include flexPosition(center, unset, column);
+}
+
+.copyright {
+  color: white;
+  font-size: 20px;
+}
+
+nav {
+  @include flexPosition(unset, center, row);
+  gap: 24px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  a {
+    @include flexPosition(center, unset, row);
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+      transition: all 125ms ease-in-out;
+      filter: drop-shadow(0 0 1px whitesmoke);
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .name span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .subFooter {
+    @include flexPosition(center, center, column);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 28px !important;
+  }
+
+  .imprint {
+    padding-top: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .copyright {
+    font-size: 18px;
+  }
+
+  nav img {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer {
+    height: 250px;
+  }
+}

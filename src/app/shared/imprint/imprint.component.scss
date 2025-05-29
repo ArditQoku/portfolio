@@ -1,0 +1,74 @@
+@import "./../../../styles.scss";
+
+:host {
+  @include flexPosition(center, unset, row);
+}
+
+section {
+  background-color: $darkBlue;
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: calc(100vh - 300px);
+  @include flexPosition(flex-start, unset, column);
+
+  a {
+    color: $midBlue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.im {
+  @include flexPosition(space-between, center, row);
+}
+
+.goBack {
+  width: 100%;
+  @include flexPosition(flex-end, unset, row);
+
+  a {
+    img {
+      width: 30px;
+      height: 30px;
+      transition: filter 125ms ease-in-out;
+      transform: rotate(-90deg);
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(72%) sepia(67%)
+          saturate(5165%) hue-rotate(152deg) brightness(99%) contrast(105%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  section {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    @include flexPosition(flex-start, center, column);
+  }
+
+  a img {
+    position: absolute;
+    right: 5%;
+    top: 68px;
+  }
+
+  p {
+    text-align: center;
+  }
+}

@@ -1,0 +1,152 @@
+@import "./../../../styles.scss";
+
+section {
+  width: 100%;
+  background-color: $darkBlue;
+  color: white;
+
+  @include flexPosition(center, center, column);
+
+  span {
+    @include flexPosition(center, center, row);
+  }
+}
+
+#portfolio span {
+  animation: fadeInAndExpand 1s ease-in-out;
+}
+
+.lineLeft {
+  height: 4px;
+  width: 10%;
+  background-color: $midBlue;
+}
+
+.lineRight {
+  height: 4px;
+  width: 30%;
+  background-color: $midBlue;
+}
+
+.lineLeftEmpty {
+  flex-grow: 1;
+}
+
+.lineOutsideRight {
+  flex-grow: 1;
+  background-color: $midBlue;
+  height: 4px;
+  z-index: 11;
+}
+
+.lineOutsideRight {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+}
+
+.lineOutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.headlinePortfolio {
+  height: 110px;
+  @include flexPosition(center, center, row);
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.headlinePortfolio span {
+  font-size: 90px;
+  font-weight: bold;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.subHeader {
+  @include flexPosition(center, center, row);
+  max-width: 1990px;
+  width: 100%;
+}
+
+.subText {
+  position: relative;
+  z-index: 10;
+}
+
+app-project {
+  z-index: 11;
+}
+
+app-project-reverse {
+  z-index: 11;
+}
+
+@media (max-width: 1200px) {
+  .headlinePortfolio span {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headlinePortfolio span {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .groupFive {
+    width: 200px;
+  }
+
+  .groupSix {
+    width: 200px;
+    top: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .headlinePortfolio span {
+    font-size: 60px;
+  }
+
+  .subText {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 550px) {
+  .headlinePortfolio span {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  .headlinePortfolio span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .headlinePortfolio span {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 350px) {
+  .headlinePortfolio span {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 300px) {
+  .headlinePortfolio span {
+    font-size: 32px;
+  }
+}

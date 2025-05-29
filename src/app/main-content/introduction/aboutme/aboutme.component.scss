@@ -1,0 +1,81 @@
+@import "./../../../../styles.scss";
+
+.aboutMe {
+  position: relative;
+  z-index: 11;
+  @include flexPosition(unset, unset, column);
+  color: white;
+  gap: 40px;
+  margin-left: 100px;
+  padding-right: 40px;
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out;
+  }
+}
+
+.title {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.info {
+  @include flexPosition(unset, center, row);
+  gap: 40px;
+}
+
+.infoDiv {
+  @include flexPosition(unset, unset, column);
+  gap: 40px;
+  transition: all 125ms ease-in-out;
+
+  img {
+    transition: transform 125ms ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 16px whitesmoke);
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 60px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .aboutMe {
+    margin-left: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 65px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .title {
+    font-size: 55px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 45px !important;
+  }
+
+  .info {
+    @include flexPosition(unset, center, column);
+    gap: 16px;
+  }
+
+  .info img {
+    padding-top: 16px;
+  }
+}

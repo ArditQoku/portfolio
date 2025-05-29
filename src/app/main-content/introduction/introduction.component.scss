@@ -1,0 +1,117 @@
+@import "./../../../styles.scss";
+
+:host {
+  @include flexPosition(center, center, row);
+}
+
+section {
+  width: 100%;
+  max-width: 1990px;
+  background-color: $darkBlue;
+  @include flexPosition(center, unset, row);
+}
+
+app-aboutme {
+  width: 50%;
+}
+
+.roundPhoto {
+  position: relative;
+  z-index: 11;
+  width: 500px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  border: solid 4px $babyBlue;
+  overflow: hidden;
+  background-color: $darkBlue;
+  background-image: url(./../../../assets/img/ardit2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.intro {
+  @include flexPosition(space-between, center, row);
+  padding-left: 0;
+}
+
+.lineRightInside {
+  height: 4px;
+  width: 300px;
+  background-color: $babyBlue;
+  position: relative;
+  z-index: 11;
+}
+
+.lineOutsideRight {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $babyBlue;
+  position: relative;
+  z-index: 11;
+}
+
+.lineOutsideTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+  position: relative;
+  z-index: 11;
+}
+
+.imgLineDiv {
+  @include flexPosition(unset, center, row);
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 1700px) {
+  .lineRightInside {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .lineRightInside {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .lineRightInside {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .lineRightInside {
+    width: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .intro {
+    @include flexPosition(center, unset, row);
+    gap: 0;
+  }
+
+  .maxWidth {
+    padding-right: 0;
+  }
+
+  app-aboutme {
+    width: unset;
+  }
+
+  .maxWidth {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

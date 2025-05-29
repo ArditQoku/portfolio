@@ -1,0 +1,37 @@
+<section>
+    <img id="desktopImage" class="form" src="/assets/img/forms/curved-background-desktop.png">
+    <img id="mobileImage" class="form" src="/assets/img/forms/curved-background.png">
+    <div id="container" class="maxWidth">
+        <div class="photoParentDiv">
+            <img class="photoLandingpage" src="/assets/img/ardit.png">
+            <img class="backgroundForm" src="/assets/img/forms/Group 2.png">
+        </div>
+
+        <div class="parentTextContainer">
+            <div class="textContainer animateOnScroll">
+                <span class="iAm">{{ 'landingPage.iAm' | translate }}</span>
+                <div id="textBox">
+                    <span class="bm">Ardit Qoku</span>
+                    <span class="fd">{{ 'landingPage.frontendDeveloper' | translate }}</span>
+                </div>
+            </div>
+            <a (click)="controllService.scrollToElement('contact', 100)" class="styledLink">{{ 'landingPage.letsTalk' | translate }}</a>
+        </div>
+        <span class="scrollDown">{{'landingPage.scrollDown' | translate}} <img src="/assets/img/forms/arrow-down-line.png"></span>
+    </div>
+
+    <footer>
+        <div class="lineOutside"></div>
+
+        <div class="navDiv">
+            <nav>
+                <div class="lineLeftInside"></div>
+                <a href="https://github.com/ArditQoku" target="_blank"><img src="/assets/img/icons/git.png"></a>
+                <a href="mailto:arditqoku@hotmail.com"><img src="/assets/img/icons/mail.png"></a>
+                <a href="https://www.linkedin.com/in/ardit-qoku/" target="_blank"><img src="/assets/img/icons/in.png"></a>
+                <a id="emailLink">contact</a>
+            </nav>
+        </div>
+        <div class="lineTransparent"></div>
+    </footer>
+</section>

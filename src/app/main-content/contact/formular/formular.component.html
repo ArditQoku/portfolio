@@ -1,0 +1,51 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+        <div class="inputContainer">
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{'contact.yourName' | translate}}"
+                   required [class.invalid]="!name.valid && name.touched" [class.valid]="name.valid && name.touched">
+            <img *ngIf="!name.valid && name.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
+            <img *ngIf="name.valid && name.touched" src="./../../../../assets/img/forms/ok.png" class="inputValid">
+            <span class="requirements" [class.visible]="!name.valid && name.touched">{{'contact.errorOne' | translate}}</span>
+        </div>
+
+        <div class="inputContainer">
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                   placeholder="{{'contact.yourEmail' | translate}}" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
+                   [class.invalid]="!email.valid && email.touched" [class.valid]="email.valid && email.touched">
+            <img *ngIf="!email.valid && email.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
+            <img *ngIf="email.valid && email.touched" src="./../../../../assets/img/forms/ok.png" class="inputValid">
+            <span class="requirements" [class.visible]="!email.valid && email.touched">{{'contact.errorTwo' | translate}}</span>
+        </div>
+
+        <div class="inputContainer">
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{'contact.message' | translate}}"
+                      style="height:200px" required [class.invalid]="!message.valid && message.touched"
+                      [class.valid]="message.valid && message.touched"></textarea>
+            <img *ngIf="!message.valid && message.touched" src="./../../../../assets/img/forms/fail.png" class="inputFail">
+            <img *ngIf="message.valid && message.touched" src="./../../../../assets/img/forms/ok.png" class="inputValid">
+            <span class="requirements" [class.visible]="!message.valid && message.touched">{{'contact.errorThree' | translate}}</span>
+        </div>
+
+        <div class="privacyPolicy animateOnScroll">
+            <div>
+                <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" id="checkbox" name="checkbox" required>
+            </div>
+
+            <span>{{'contact.privacyPolicyOne' | translate}} <a class="ppLink" [routerLink]="['/privacyPolicy']">{{'contact.privacyPolicyTwo' | translate}}</a>
+                {{'contact.privacyPolicyThree' | translate}}</span>
+        </div>
+
+        <span class="requirements" [class.visible]="!checkbox.valid && checkbox.touched">{{'contact.errorFour' | translate}}</span>
+        <div class="subDiv">
+            <input type="submit" value="{{'contact.sendMessage' | translate}}" [disabled]="!contactForm.form.valid && !contactData.checkbox"
+                   [class.babyBlue]="contactForm.form.valid && contactData.checkbox">
+        </div>
+    </form>
+
+    <div *ngIf="submissionSuccess" class="successMessage">
+        {{'contact.successMessage' | translate}}
+    </div>
+
+    <div class="goUp" (click)="this.controll.linkToTop()"><img src="./../../../../assets/img/forms/goup.png"></div>
+</div>

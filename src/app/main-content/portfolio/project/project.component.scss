@@ -1,0 +1,190 @@
+@import "./../../../../styles.scss";
+
+:host {
+  position: relative;
+  max-width: 1990px;
+  width: 100%;
+}
+
+.infoBlock {
+  @include flexPosition(center, flex-start, column);
+  gap: 32px;
+  width: 520px;
+
+  div {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+img {
+  width: 400px;
+  filter: drop-shadow(0 0 3px $darkBlue);
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 125ms ease-in-out;
+  }
+}
+
+.projectBlock {
+  @include flexPosition(center, center, row);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 100px;
+  position: relative;
+  z-index: 10;
+
+  span {
+    animation: fadeInAndExpand 1s ease-in-out ;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: $midBlue;
+  text-shadow: 0px 0px 5px $darkBlue;
+}
+
+.groupFive {
+  position: absolute;
+  left: 0;
+  width: 300px;
+  top: 70%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.skills {
+  color: $babyBlue;
+  font-size: 24px;
+  text-shadow: 0px 0px 5px $darkBlue;
+}
+
+.liveTest {
+  width: 150px;
+  height: 58px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: $midBlue;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  z-index: 3;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 6px 1px $darkBlue;
+
+  &:hover {
+    background-color: $babyBlue;
+    transition: background-color 125ms ease;
+  }
+}
+
+.gitHub {
+  width: 150px;
+  height: 58px;
+  border-radius: 10px;
+  outline: none;
+  border: solid 2px $babyBlue;
+  color: white;
+  background-color: $darkBlue;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  z-index: 3;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 6px 1px $darkBlue;
+
+  &:hover {
+    background-color: $babyBlue;
+    transition: background-color 125ms ease;
+  }
+}
+
+.description {
+  text-shadow: 0px 0px 5px $darkBlue;
+}
+
+@media (max-width: 1100px) {
+  .projectBlock {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .infoBlock {
+    align-items: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 350px;
+  }
+
+  .description {
+    width: 400px;
+  }
+
+  .infoBlock {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  img {
+    width: 320px;
+  }
+}
+
+@media (max-width: 450px) {
+  img {
+    width: 300px;
+  }
+
+  .description {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  img {
+    width: 280px;
+  }
+
+  .liveTest,
+  .gitHub {
+    width: 120px;
+  }
+
+  .description {
+    width: 300px;
+  }
+
+  .skills {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  img {
+    width: 260px;
+  }
+
+  .description {
+    width: 250px;
+  }
+}

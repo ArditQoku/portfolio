@@ -1,0 +1,211 @@
+@import "./../../../styles.scss";
+
+section {
+  height: 100vh;
+  background-color: $darkBlue;
+  @include flexPosition(center, center, column);
+  position: relative;
+  margin-top: 100px;
+}
+
+#container {
+  position: relative;
+  @include flexPosition(center, unset, row);
+}
+
+.form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 150px;
+  z-index: 3;
+  width: 100%;
+}
+
+.parentTextContainer {
+  text-align: center;
+  z-index: 4;
+  padding-right: 100px;
+}
+
+.photoParentDiv {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  padding-top: 0;
+}
+
+.photoLandingpage {
+  width: 520px;
+  z-index: 2;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 3px $darkBlue);
+}
+
+.backgroundForm {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  width: 100%;
+}
+
+.textContainer {
+  @include flexPosition(unset, unset, row);
+  z-index: 3;
+  padding-top: 160px;
+  width: 60%;
+}
+
+#textBox {
+  @include flexPosition(center, unset, column);
+  animation: fadeInAndExpand 1s ease-in-out;
+}
+
+.bm {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: fadeInAndExpand 1s ease-in-out;
+}
+
+.fd {
+  color: $midBlue;
+  font-size: 59px;
+  white-space: nowrap;
+  margin-top: -30px;
+  padding-bottom: 30px;
+  animation: fadeInAndExpand 1s ease-in-out;
+}
+
+.styledLink {
+  display: inline-block;
+  width: 200px;
+  height: 58px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: $babyBlue;
+  font-size: 20px;
+  text-align: center;
+  line-height: 58px;
+  cursor: pointer;
+  transition: transform 0.125s ease, background-color 0.1s ease;
+  z-index: 3;
+  text-decoration: none;
+  filter: drop-shadow(0 0 3px $darkBlue);
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $midBlue;
+  }
+}
+
+footer {
+  height: 80px;
+  @include flexPosition(center, center, row);
+  z-index: 100;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 150px;
+
+  nav {
+    @include flexPosition(unset, center, row);
+    gap: 24px;
+
+    > a {
+      text-decoration: none;
+      color: white;
+      font-size: 28px;
+      transition: all 125ms ease-in-out;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+        transition: transform 125ms ease-in-out;
+      }
+
+      &:hover img {
+        transform: scale(1.3);
+        transition: transform 125ms ease-in-out;
+        filter: drop-shadow(0 0 1px whitesmoke);
+      }
+    }
+  }
+}
+
+.navDiv {
+  width: 100%;
+  max-width: 1990px;
+}
+
+.lineLeftInside {
+  height: 4px;
+  width: 100px;
+  background-color: $midBlue;
+  border-radius: 5px;
+  margin-left: -3px;
+}
+
+.lineOutside {
+  height: 4px;
+  flex-grow: 1;
+  background-color: $midBlue;
+}
+
+.lineTransparent {
+  height: 4px;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.scrollDown {
+  z-index: 10;
+  color: white;
+  @include flexPosition(center, center, row);
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 90%;
+  animation: scroll 3s infinite ease-in-out;
+  transform: rotate(90deg);
+
+  img {
+    transform: rotate(-90deg);
+  }
+}
+
+#desktopImage {
+  display: block;
+}
+
+#mobileImage {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  #desktopImage {
+    display: none;
+  }
+  #mobileImage {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .scrollDown {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  #emailLink {
+    display: none;
+  }
+}
