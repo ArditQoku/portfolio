@@ -6,6 +6,11 @@ header {
   height: 100px;
   @include flexPosition(center, unset, row);
 
+  .name.notClickable {
+    pointer-events: none;
+    cursor: default;
+  }
+
   .burgerMenu {
     width: 27px;
     height: 27px;
